@@ -4,6 +4,3 @@ services:
     env: static
     buildCommand: ./build.sh
     staticPublishPath: build/web
-    envVars:
-      - key: FLUTTER_VERSION
-        value: 3.16.0
