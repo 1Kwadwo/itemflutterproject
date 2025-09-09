@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: personal-expenses-tracker
+    env: static
+    buildCommand: flutter build web --release
+    staticPublishPath: build/web
+    envVars:
+      - key: FLUTTER_VERSION
+        value: 3.16.0
