@@ -2,14 +2,7 @@ services:
   - type: web
     name: personal-expenses-tracker
     env: static
-    buildCommand: |
-      # Install Flutter
-      git clone https://github.com/flutter/flutter.git -b stable
-      export PATH="$PATH:`pwd`/flutter/bin"
-      flutter doctor
-      flutter config --enable-web
-      flutter pub get
-      flutter build web --release
+    buildCommand: ./build.sh
     staticPublishPath: build/web
     envVars:
       - key: FLUTTER_VERSION
